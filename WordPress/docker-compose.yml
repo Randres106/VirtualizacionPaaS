@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mariadb:
+    image: bitnami/mariadb:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=myuser
+      - MARIADB_PASSWORD=mypassword
+      - MARIADB_DATABASE=mydatabase
+
+  wordpress:
+    image: bitnami/wordpress:latest
+    ports:
+      - "8888:8080"
+    environment:
+      - WORDPRESS_DATABASE_HOST=mariadb
+      - WORDPRESS_DATABASE_PORT_NUMBER=3306
+      - WORDPRESS_DATABASE_NAME=mydatabase
+      - WORDPRESS_DATABASE_USER=myuser
+      - WORDPRESS_DATABASE_PASSWORD=mypassword
