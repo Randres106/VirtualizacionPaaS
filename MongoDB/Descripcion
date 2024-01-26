@@ -1,0 +1,11 @@
+En base a las siguientes instrucciones <br></br>
+
+1. Desde bitnami, elija una imagén o archivo OVA para instalarlo localmente en su computadora. (por ejemplo, un motor de base de datos)<br></br>
+
+2. El servicio debe poder estar accesible desde la máquina HOST.<br></br>
+
+3. Interactue con e servicio (por ejemplo, haciendo un API que haga un CRUD hacia una tabla en esa BDD).<br></br>
+
+Se utilizo MongoDB y las rutas agregadas en el archivo de Word.<br></br>
+
+Por medio de un index.ls se levanto el host y solo se mandaban las solicitudes por medio de apis desde consola<br></br>
